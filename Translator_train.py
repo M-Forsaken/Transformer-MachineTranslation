@@ -59,10 +59,6 @@ if __name__ == "__main__":
         load_checkpoint(torch.load(SAVE_PATH_MODEL + CHECKPOINT_FILE), model, optimizer,scheduler)
 
     step_count, epoch_num = GetLogFile()
-    # Calculate Bleu Score
-    score = bleu(val_data, model, english, vietnamese, device)
-    print(f"Bleu score {score * 100:.2f}")
-    sys.exit()
 
     for epoch in range(num_epochs):
         print(f"[Epoch {epoch + 1} / {num_epochs}]")
