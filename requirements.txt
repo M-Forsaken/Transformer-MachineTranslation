@@ -1,3 +1,7 @@
 nltk
 pickle
 torch
+tqdm
+torchtext
+spacy
+datasets
